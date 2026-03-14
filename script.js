@@ -22,7 +22,7 @@ function verify(name, email, pass){
         }
     }
     register(name, email, pass); 
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 function registrarUsuario(){
