@@ -152,7 +152,7 @@ input[type= "button"]{
 
 }
 
-input[type= "submit"]:hover{
+input[type= "button"]:hover{
     border-color: #60f8f8;
     transition: 5ms;
 }
