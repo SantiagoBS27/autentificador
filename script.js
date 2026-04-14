@@ -34,9 +34,22 @@ function registrarUsuario(){
         alert("Name must be at least 6 characters"); 
         return; 
     }
-    if(!email.includes("@")){
-        alert("Invalid email"); 
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!emailRegex.test(email)){
+        alert("Invalid email format"); 
         return; 
+    }
+    if(
+    !email.endsWith("@gmail.com") &&
+    !email.endsWith("@yahoo.com") &&
+    !email.endsWith("@estudiantec.cr") &&
+    !email.endsWith("@itcr.ac.cr") &&
+    !email.endsWith("@hotmail.com")
+    ){
+    alert("Email must be a valid email, example: gmail, yahoo, hotmail");
+    return;
     }
     if(password.length < 6){
     alert("Password must be at least 6 characters"); 
